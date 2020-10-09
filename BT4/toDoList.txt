@@ -1,0 +1,5 @@
+ do 1,y
+ do 1,n
+ do 1,n
+ do 1,y
+ do 1,n

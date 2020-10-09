@@ -1,0 +1,16 @@
+D:\LTTQ\BT4\BT4\bin\Debug\BT4.exe.config
+D:\LTTQ\BT4\BT4\bin\Debug\BT4.exe
+D:\LTTQ\BT4\BT4\bin\Debug\BT4.pdb
+D:\LTTQ\BT4\BT4\obj\Debug\BT4.csprojAssemblyReference.cache
+D:\LTTQ\BT4\BT4\obj\Debug\BT4.Form1.resources
+D:\LTTQ\BT4\BT4\obj\Debug\BT4.Properties.Resources.resources
+D:\LTTQ\BT4\BT4\obj\Debug\BT4.csproj.GenerateResource.cache
+D:\LTTQ\BT4\BT4\obj\Debug\BT4.csproj.CoreCompileInputs.cache
+D:\LTTQ\BT4\BT4\obj\Debug\BT4.exe
+D:\LTTQ\BT4\BT4\obj\Debug\BT4.pdb
+D:\LTTQ\BT4\BT4\obj\Debug\BT4.Form2.resources
+D:\LTTQ\BT4\BT4\bin\Debug\Properties\Database.mdf
+D:\LTTQ\BT4\BT4\bin\Debug\Properties\Database_log.ldf
+D:\LTTQ\BT4\BT4\obj\Debug\BT4.toDoListForm.resources
+D:\LTTQ\BT4\BT4\bin\Debug\XanderUI.dll
+D:\LTTQ\BT4\BT4\obj\Debug\BT4.csproj.CopyComplete

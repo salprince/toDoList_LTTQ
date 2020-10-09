@@ -37,8 +37,21 @@ namespace BT4
             }
             
             toDoList myList = new toDoList();
-            myList.export("D:\\LTTQ\\BT4\\toDoList.txt",data);
+            myList.exportAppend("toDoList.txt",data);
             MessageBox.Show("Saved!");
+            this.Hide();
+        }
+        public void deleteSelectedRow()
+        {
+            foreach (DataGridViewRow row in this.toDo.DataGridView.SelectedRows)
+            {
+                this.toDo.DataGridView.Rows.RemoveAt(row.Index);
+            }
+        }
+
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            deleteSelectedRow();
         }
     }
 }

@@ -82,7 +82,6 @@
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(367, 45);
             this.textBoxPassword.TabIndex = 12;
-            this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             this.textBoxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPassword_KeyPress);
             // 
             // labelPassword
@@ -94,7 +93,6 @@
             this.labelPassword.Size = new System.Drawing.Size(227, 36);
             this.labelPassword.TabIndex = 11;
             this.labelPassword.Text = "PassWord";
-            this.labelPassword.Click += new System.EventHandler(this.labelPassword_Click);
             // 
             // textBoxUserName
             // 
@@ -103,7 +101,6 @@
             this.textBoxUserName.Name = "textBoxUserName";
             this.textBoxUserName.Size = new System.Drawing.Size(367, 45);
             this.textBoxUserName.TabIndex = 10;
-            this.textBoxUserName.TextChanged += new System.EventHandler(this.textBoxUserName_TextChanged);
             this.textBoxUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxUserName_KeyPress);
             // 
             // labelUserName
@@ -115,7 +112,6 @@
             this.labelUserName.Size = new System.Drawing.Size(225, 36);
             this.labelUserName.TabIndex = 9;
             this.labelUserName.Text = "UserName";
-            this.labelUserName.Click += new System.EventHandler(this.labelUserName_Click);
             // 
             // textBoxRePass
             // 

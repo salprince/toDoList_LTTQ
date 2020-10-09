@@ -77,6 +77,7 @@
             this.btDelete.TabIndex = 1;
             this.btDelete.Text = "Delete";
             this.btDelete.UseVisualStyleBackColor = false;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
             // btSave
             // 
@@ -84,9 +85,9 @@
             this.btSave.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSave.Location = new System.Drawing.Point(132, 10);
             this.btSave.Name = "btSave";
-            this.btSave.Size = new System.Drawing.Size(100, 40);
+            this.btSave.Size = new System.Drawing.Size(213, 40);
             this.btSave.TabIndex = 3;
-            this.btSave.Text = "Save";
+            this.btSave.Text = "Save and Exit";
             this.btSave.UseVisualStyleBackColor = false;
             this.btSave.Click += new System.EventHandler(this.Save_Click);
             // 

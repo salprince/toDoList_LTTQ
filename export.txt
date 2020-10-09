@@ -1,7 +1,0 @@
- job a,True
- job b,False
- job c,True
- job d,False
-sdsfsdf,True
-sdsfsdf,True
-sdsfsdf,True

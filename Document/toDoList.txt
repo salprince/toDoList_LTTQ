@@ -1,0 +1,6 @@
+sal,sad,False
+sal,adasda,False
+sal,dasd,False
+salprince,1,False
+salprince,2,False
+salprince,6,False

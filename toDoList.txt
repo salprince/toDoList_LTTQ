@@ -1,8 +1,0 @@
-sal,a,False
-sal,d,False
-sal,fa,True
-sal,a,False
-salprince,a,False
-salprince,d,False
-salprince,f,True
-salprince,a,False

@@ -1,2 +1,0 @@
-đây là file demoGit
-Sal đây, tui thêm 1 dòng nữa để pull về thử

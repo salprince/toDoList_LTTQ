@@ -42,7 +42,7 @@ namespace BT4
                 }
             }
         }
-        public void export(String path,String data)
+        public void exportAppend(String path,String data)
         {
             if (!File.Exists(path))
             {
@@ -51,6 +51,15 @@ namespace BT4
             }
             File.AppendAllText(path, data);
             //File.WriteAllText();
+        }
+        public void exportOverwrite(String path, String data)
+        {
+            if (!File.Exists(path))
+            {
+                var myFile = File.Create(path);
+                myFile.Close();
+            }
+            File.WriteAllText(path, data);
         }
         public String toString()
         {

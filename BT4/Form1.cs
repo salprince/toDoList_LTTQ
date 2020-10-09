@@ -16,11 +16,7 @@ namespace BT4
         {
             InitializeComponent();
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+        
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             textBoxUserName.Text = "";
@@ -46,41 +42,40 @@ namespace BT4
         {
             if (e.KeyChar == (char)13)
             {
-                LoginManage ql = new LoginManage();
-                ql.list = ql.importData("D:\\LTTQ\\BT4\\BT4\\Login.txt");
-                String pass = ql.find(textBoxUserName.Text);
-                if (textBoxPassword.Text.Trim().Equals(pass.Trim()))
-                {
-                    MessageBox.Show("Login Success");
-                    var myForm = new toDoListForm(this.textBoxUserName.Text);
-                    myForm.Show();
-                }
-                else MessageBox.Show("Try Again");
+                this.login();
             }
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            LoginManage ql = new LoginManage();
-            ql.list = ql.importData("D:\\LTTQ\\BT4\\BT4\\Login.txt");
-            String pass = ql.find(textBoxUserName.Text);
-            loadToDoForm(textBoxUserName.Text);
-            /*if (textBoxPassword.Text.Trim().Equals(pass.Trim()))
-            {
-                //MessageBox.Show("Login Success");
-                loadToDoForm();
-            }
-            else MessageBox.Show("Try Again");*/
+            this.login();
         }
         private void loadToDoForm(String userName)
         {
             var myForm = new toDoListForm(this.textBoxUserName.Text);
             myForm.Show();
             toDoList myList = new toDoList();
-            myList.import("D:\\LTTQ\\BT4\\toDoList.txt");
+            myList.import("toDoList.txt");
+            String newData = "";
             for (int i = 0; i < myList.toDo.Count; i++)
-                if(myList.userName[i] == userName)
+            {
+                if (myList.userName[i] == userName)
                     myForm.toDo.DataGridView.Rows.Add(myList.toDo[i], myList.checkBox[i]);
+                else
+                    newData += $"{myList.userName[i]},{myList.toDo[i]},{myList.checkBox[i]}\n";
+            }
+            myList.exportOverwrite("toDoList.txt", newData);
+        }
+        public void login()
+        {
+            LoginManage ql = new LoginManage();
+            ql.list = ql.importData("Login.txt");
+            String pass = ql.find(textBoxUserName.Text);
+            if (textBoxPassword.Text.Trim().Equals(pass.Trim()))
+            {
+                loadToDoForm(textBoxUserName.Text);
+            }
+            else MessageBox.Show("Try Again");
         }
     }
 }

@@ -33,28 +33,19 @@ namespace BT4
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (this.textBoxPassword.Text == this.textBoxRePass.Text)
+            {
+                LoginManage ql = new LoginManage();
+                ql.list = ql.importData("Login.txt");
+                String pass = ql.find(textBoxUserName.Text);
+                if (pass == "***")
+                    ql.list.Add(new Login(textBoxUserName.Text, textBoxPassword.Text));
+                ql.exportData("Login.txt");
+
+            }
             parent.Show();
-
             this.Hide();
-        }
-
-        private void textBoxPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void textBoxUserName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void labelUserName_Click(object sender, EventArgs e)
-        {
-
-        }
+        }        
         private void textBoxPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)
@@ -69,16 +60,15 @@ namespace BT4
                 if (this.textBoxPassword.Text == this.textBoxRePass.Text)
                 {
                     LoginManage ql = new LoginManage();
-                    ql.list = ql.importData("D:\\LTTQ\\BT4\\BT4\\Login.txt");
+                    ql.list = ql.importData("Login.txt");
                     String pass = ql.find(textBoxUserName.Text);
                     if (pass == "***")
                         ql.list.Add(new Login(textBoxUserName.Text, textBoxPassword.Text));
-                    ql.exportData("D:\\LTTQ\\BT4\\BT4\\Login.txt");
+                    ql.exportData("Login.txt");
 
                 }
             }
         }
-
         private void textBoxUserName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)
